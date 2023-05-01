@@ -39,6 +39,7 @@ public class CC {
                     owner.setHeadPic(responseOwner.getString("portrait"));
                     owner.setPlatform("cc");
                     owner.setRoomId(responseOwner.getString("cuteid"));
+                    owner.setRoomName(responseOwner.getString("title"));
                     owner.setIsLive((responseOwner.getInteger("status") !=null && responseOwner.getInteger("status") == 1) ? "1" : "0");
                     owner.setFollowers(responseOwner.getInteger("follower_num"));
                     if ("1".equals(isLive) && !"1".equals(owner.getIsLive())){

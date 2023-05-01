@@ -4,7 +4,6 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
-import org.springframework.boot.autoconfigure.data.redis.RedisProperties;
 import org.springframework.util.DigestUtils;
 import work.yj1211.live.utils.Global;
 import work.yj1211.live.utils.HttpUtil;
@@ -73,6 +72,7 @@ public class Huya {
                 owner.setHeadPic(responseOwner.getString("game_avatarUrl52"));
                 owner.setPlatform("huya");
                 owner.setRoomId(responseOwner.getString("room_id"));
+                owner.setRoomName(responseOwner.getString("live_intro"));
                 owner.setIsLive(responseOwner.getBoolean("gameLiveOn") ? "1" : "0");
                 owner.setFollowers(responseOwner.getInteger("game_activityCount"));
                 list.add(owner);

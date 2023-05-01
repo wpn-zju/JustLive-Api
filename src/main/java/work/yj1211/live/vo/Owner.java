@@ -7,6 +7,7 @@ public class Owner implements Comparable<Owner>{
     private String platform;
     private String nickName;
     private String roomId;
+    private String roomName;
     private String headPic;
     private String cateName;
     private String isLive;

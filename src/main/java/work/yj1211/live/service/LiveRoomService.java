@@ -206,8 +206,8 @@ public class LiveRoomService{
         if ("cc".equals(platForm)){
             roomInfo = CC.getRoomInfo(roomId);
         }
-        int isFollowed = roomMapper.ifIsFollowed(uid, platForm,roomId);
-        roomInfo.setIsFollowed((isFollowed == 0) ? 0 : 1);
+        // int isFollowed = roomMapper.ifIsFollowed(uid, platForm,roomId);
+        // roomInfo.setIsFollowed((isFollowed == 0) ? 0 : 1);
         return roomInfo;
     }
 

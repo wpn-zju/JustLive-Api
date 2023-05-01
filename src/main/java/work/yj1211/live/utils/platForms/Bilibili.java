@@ -305,6 +305,7 @@ public class Bilibili {
     public List<Owner> search(String keyWords, String isLive){
         int i = 0;
         List<Owner> list = new ArrayList<>();
+        // 该链接不可用 code -412 请求被拦截 需要获取一次cookie
         String url = "https://api.bilibili.com/x/web-interface/search/" +
                 "type?context=&search_type=live_user&cover_type=user_cover" +
                 "&page=1&order=&keyword=" + keyWords + "&category_id=&__refresh__=true" +
